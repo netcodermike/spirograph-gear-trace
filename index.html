@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trace a rolling gear inside a fixed ring and explore how tooth counts and pen offset determine the curve and its closing period.">
+  <title>Spirograph Gear Trace</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<main>
+  <div class="heading">
+    <div><h1>Spirograph Gear Trace</h1><p>Trace a rolling gear inside a fixed ring and explore how tooth counts and pen offset determine the curve and its closing period.</p></div>
+    <a href="https://github.com/netcodermike/spirograph-gear-trace">Project source ↗</a>
+  </div>
+  <div class="workspace">
+    <section class="panel stage" aria-label="Project workspace">
+      <canvas id="drawing" width="720" height="520" aria-label="Trace of the pen inside a rolling gear"></canvas><p id="reading" role="status"></p>
+    </section>
+    <section class="panel controls" aria-label="Controls">
+      <label for="example">Gear sets<select id="example"><option value="96,56,84">Seven-orbit weave</option><option value="96,24,100">Four-cusp curve</option><option value="72,36,100">Straight-line linkage</option></select></label><label for="ring">Ring teeth <output id="ringValue"></output><input id="ring" type="range" min="12" max="144" value="96"></label><label for="gear">Gear teeth <output id="gearValue"></output><input id="gear" type="range" min="1" max="100" value="56"></label><label for="offset">Pen offset <output id="offsetValue"></output><input id="offset" type="range" min="0" max="100" value="84"></label><label for="progress">Trace progress <output id="progressValue"></output><input id="progress" type="range" min="0" max="100" value="100"></label><label class="check"><input id="guide" type="checkbox" checked>Show rolling gear and pen</label><p class="error" id="error" role="alert"></p>
+    </section>
+  </div>
+</main>
+</body>
+</html>
